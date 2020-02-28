@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula 05-JS</title>
+	</head>
+	<body>
+		<script>
+			var txt = "texto qualquer, pegou \"fogo\" na caixa d'água texto";
+			console.log(txt.length);//tamanho
+			console.log(txt.indexOf("texto"));//posição da primeira vez que aparece
+			console.log(txt.lastIndexOf("texto"));//posição da ultima vez que aparece
+			console.log(txt.slice(40, 50));//pegando parte por posição inicial e final
+			console.log(txt.substr(40, 10));//pegando parte por posição inicial e quantidade
+			console.log(txt.replace("fogo", "batata"));//trsoca
+			console.log(txt.toUpperCase());
+			console.log(txt.toLowerCase());
+
+			var float = 30.92835;
+			console.log(float.toFixed(2));//escolhe o numero de casas decimais e faz o aredondamento 
+			console.log(float.toPrecision(2));//escolhe o numero de digitos e faz o arredondamento
+		</script>
+	</body>
+	</html>	
