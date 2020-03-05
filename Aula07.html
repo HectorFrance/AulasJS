@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula 07-JS</title>
+	</head>
+	<body>
+		<script>
+			 var idade = 16;
+			var situacao = (idade >= 18) ? "maioridade" : "menoridade";
+			console.log(situacao);
+			var n = 5;
+			if(n > 5) console.log("verdade");
+			if(n > 5){
+				console.log("top");
+			}else if(n == "5"){
+				console.log("medio");
+			}else if(n === "5"){
+				console.log("low");
+			}else{
+				console.log("falsa");
+			}
+
+			var diasemana = new Date().getDay();
+			switch(diasemana){
+				case 6 :
+				console.log("sabado");
+				break;
+				case 5 :
+				console.log("sexta");
+				break;
+				case 4 :
+				console.log("quinta");
+				break;
+				case 3 :
+				console.log("quarta");
+				break;
+				case 2 :
+				console.log("terça");
+				break;
+				case 1 :
+				console.log("segunda");
+				break;
+				case 0 :
+				console.log("terça");
+				break;
+				default:
+				console.log("nada");
+				break; 
+			} 
+
+			var liguagem = ["php", "java", "c++", "asp"];
+			for(i = 0;i < liguagem.length ; i++){
+			console.log(liguagem[i]);
+		}
+
+		var cont = 0;
+		var cont2 = 5;
+		var liguagem = ["php", "java", "c++", "asp"];
+		while(cont < 10){
+	    console.log(liguagem[cont]);
+		cont++;
+		}
+		
+		do{
+			console.log(liguagem[cont2]);
+			cont2++;
+		}while(cont2 < liguagem.length)
+
+		</script>
+	</body>
+	</html>	
