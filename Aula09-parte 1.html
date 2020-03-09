@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula 09-JS</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<p class="exemplo"></p>
+		<p class="exemplo"></p>
+		<p class="exemplo"></p>
+		<h1 class="exemplo"></h1>
+		<div class="exemplo"></div>
+		<script>
+			document.getElementById("demo").innerHTML = "texto do meu paragrafo";
+			console.log(document.getElementsByTagName("p"));
+			console.log(document.getElementsByClassName("exemplo"));
+			var x = document.getElementsByClassName("exemplo");
+			for(i = 0;i < 5; i++){
+				x[i].innerHTML = "Batata";
+			}
+			var y = document.querySelectorAll("p.exemplo");
+			console.log(y);
+		</script>
+	</body>
+	</html>	
