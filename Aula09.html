@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula 09-JS</title>
+	</head>
+	<body onload="fun()">
+		<select name="" id="dm" onchange="cham()">
+			<option value="opc1"> Opção 1</option>
+			<option value="opc2"> Opção 2</option>
+			<option value="opc3"> Opção 3</option>
+		</select>
+		<p id="demo"></p>
+		<p class="exemplo"></p>
+		<p class="exemplo"></p>
+		<p class="exemplo"></p>
+		<h1 class="exemplo"></h1>
+		<div class="exemplo"></div>
+		<img src="imagem.jpg" alt="texro alter" id="mg">
+		<h1 id="btn" onclick="funcao(this)">Clique aqui</h1>
+		<h1 id="btt" onmouseover="over(this)" onmouseout="out(this)">lll</h1>
+		<script>
+			document.getElementById("demo").innerHTML = "texto do meu paragrafo";
+			console.log(document.getElementsByTagName("p"));
+			console.log(document.getElementsByClassName("exemplo"));
+			var x = document.getElementsByClassName("exemplo");
+			for(i = 0;i < 5; i++){
+				x[i].innerHTML = "Batata";
+			}
+			var y = document.querySelectorAll("p.exemplo");
+			console.log(y);
+
+			document.getElementById("mg").src = "foto.jpg";
+			document.getElementById("mg").alt = "txt 2";
+			document.getElementById("demo").style.color = "red";
+			function funcao(elemento){
+				elemento.innerHTML = "obrigado";
+				document.getElementById("demo").onclick = funcao;
+			}
+			function fun (){
+				alert("pagina foi carregada");
+			}
+			function cham(){
+				alert("Opção aterada");
+			}
+			function over(elemento){
+				elemento.innerHTML = "Ok, o mause esta dobre";
+			}
+			function out(ele){
+				ele.innerHTML = "pase o mause aqui"; 
+			}
+		</script>
+	</body>
+	</html>	
