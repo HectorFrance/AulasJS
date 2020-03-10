@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Aula 10-JS</title>
+		<style type="text/css">
+			.c{
+				display: block;
+				margin-top: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="tt">Espere</h1>
+		<h2 id="te"></h2>
+		<input type="button" value="avnçar" onclick="window.history.forward();">
+		<input type="button" value="voltar" onclick="window.history.back();">
+		<input type="button" value="cancelar timeout" onclick="clearTimeout(msgt)" class="c">
+		<input type="button" value="cancelar interval" onclick="clearInterval(msgi)" class="c">
+		<div id="msg"></div>
+		<script type="text/javascript">
+			console.log(window.location.href);
+			window.localStorage.setItem("nome","ricardo");
+			window.sessionStorage.setItem("nome","pedro");
+			document.getElementById("msg").innerHTML = window.sessionStorage.getItem("nome");
+			window.open("https://www.intoxianime.com","","width=500, height=400");
+			var janela = window.open("","","width=500, height=400");
+			janela.document.write("Isso é um da janela pop-up");
+			janela.opener.document.write("Isso é um da janela principal");
+			var msgt = setTimeout(msgtimeout, 6000);
+			var msgi = setInterval(msginterval, 1000);
+
+			function msgtimeout(){
+				console.log("msg via timeout");
+				document.getElementById("tt").innerHTML = "Obrigado";
+			}
+			var x = -2;
+			function msginterval(){
+				console.log("msg via interval");
+				document.getElementById("te").innerHTML = x;
+				if(x>10){
+					console.log("msg via interval");
+				document.getElementById("te").innerHTML = "vai arrumar o que fazer";
+				clearInterval(msgi);
+				}
+				x++;
+			}
+		</script>
+	</body>
+	</html>	
